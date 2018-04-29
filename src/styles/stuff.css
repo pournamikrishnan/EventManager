@@ -1,0 +1,189 @@
+.button{
+  border: 1px solid black;
+  border-radius: 15px;
+  min-width: 80px;
+  max-width: 450px;
+  height: 24px;
+  padding-top: 4px;
+  margin: 1px;
+  text-align: center;
+  font-size: 15px;
+}
+.event-adder{
+  cursor: pointer;
+}
+.events-box{
+  border:1px solid #ffd700;
+  background-color: #fcfffe;
+  padding:10px;
+  margin:10px;
+  border-radius: 5px;
+
+}
+.event-details{
+  display: flex;
+}
+.event-name{
+  flex: 1 1 0%;
+}
+.button-space{
+  display: flex;
+  padding-top: 22px;
+  flex-direction: column;
+  margin-right: 20px
+}
+.event-image{
+  padding:5px;
+}
+.event-small-image{
+  width: 100px;
+  height: 100px;
+  padding: 2px;
+
+}
+.filter-button{
+  height: 25px;
+  color: white;
+  max-width: 400px;
+  background-color: deepskyblue;
+  border: 1px solid deepskyblue;
+  padding: 8px 10px 1px 9px;
+  text-align: center;
+  cursor: pointer;
+}
+.event-address{
+  cursor: pointer;
+  color: blue;
+}
+.event-dates{
+
+}
+.sales-not-start{
+  cursor: pointer;
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+}
+.sales-start{
+  cursor: pointer;
+  background-color: yellow;
+  border: 1px solid yellow;
+  color: red;
+}
+.sales-start:hover{
+  color: black;
+  background-color: lightyellow;
+}
+.sales-end{
+  background-color: #8080804d;
+  border: 1px solid #8080804d;
+  color: white;
+}
+.react-add-to-calendar{
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+.react-add-to-calendar__wrapper{
+  zoom: 1;
+  cursor: pointer;
+}
+.react-add-to-calendar__button{
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #aab9d4;
+  border-radius: 23px;
+  color: #000;
+}
+.react-add-to-calendar__button--light{
+  background-color: #fff;
+}
+.react-add-to-calendar__dropdown{
+  margin-top: 16px;
+  position: absolute;
+  border-radius: 23px;
+  top: 30px;
+  left: 1px;
+  width: 93%;
+  padding: 5px 0 5px 8px;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid #a8a8a8;
+  background-color: #fff;
+  text-align: left;
+  z-index: 2;
+}
+.react-add-to-calendar__dropdown > ul{
+  white-space: nowrap;
+  padding-left: 10px
+}
+.react-add-to-calendar__icon--right{
+  display: none;
+}
+.loader {
+  margin-top: 17%;
+  margin-left: 48%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.carousel.carousel-slider{
+      height: 503px;
+}
+.slide{
+      height: 503px;
+}
+.slide img{
+      height: 503px;
+}
+
+.image {
+  opacity: 1;
+  /* display: block; */
+  /* width: 100%; */
+  /* height: auto; */
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.who-image:hover .image {
+  opacity: 0.3;
+}
+
+.who-image:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
