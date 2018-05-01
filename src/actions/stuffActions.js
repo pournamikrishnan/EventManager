@@ -3,6 +3,9 @@ import * as allActions from './allActions';
 export function receiveStuff(data) {
     return {type: allActions.RECEIVE_STUFF, stuff: data};
 }
+/*
+ * Format date in required format as per ticketmaster API.
+*/
 export function formattedDate(d) {
   let month = String(d.getMonth() + 1);
   let day = String(d.getDate());
@@ -13,6 +16,9 @@ export function formattedDate(d) {
 
   return `${year}-${month}-${day}`;
 }
+/*
+ * Fetch Events depending on dates and family option choice.
+*/
 export function fetchStuff(state) {
   let sDate = formattedDate(new Date());
   if(state.dates && state.dates.start != ""){

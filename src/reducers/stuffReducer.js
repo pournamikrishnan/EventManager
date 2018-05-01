@@ -1,6 +1,9 @@
 import initialState from './initialState';
 import {FETCH_STUFF, RECEIVE_STUFF} from '../actions/allActions';
 
+/*
+ * Reduces have switch cases depending on action type.
+ */
 export default function stuff(state = initialState.stuff, action) {
   let newState;
   switch (action.type) {
