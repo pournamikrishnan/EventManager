@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import StuffList from './components/stuffList';
+import ShowList from './components/showList';
 
 class App extends Component {
     render() {
         return (
             <div className="app" style={{backgroundColor: "lightblue"}}>
-                <StuffList />
+                <ShowList />
             </div>
         );
     }

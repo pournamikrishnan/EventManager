@@ -1,7 +1,7 @@
 import * as allActions from './allActions';
 
-export function receiveStuff(data) {
-    return {type: allActions.RECEIVE_STUFF, stuff: data};
+export function receiveShow(data) {
+    return {type: allActions.RECEIVE_SHOW, show: data};
 }
 /*
  * Format date in required format as per ticketmaster API.
@@ -19,7 +19,7 @@ export function formattedDate(d) {
 /*
  * Fetch Events depending on dates and family option choice.
 */
-export function fetchStuff(state) {
+export function fetchShow(state) {
   let sDate = formattedDate(new Date());
   if(state.dates && state.dates.start != ""){
     sDate = formattedDate(state.dates.start)
@@ -57,7 +57,7 @@ export function fetchStuff(state) {
             )
             .then(response => {
                 if(response.status === 200){
-                    dispatch(receiveStuff(response.data))
+                    dispatch(receiveShow(response.data))
                 }else{
                     var flash = {
                         type: 'error',

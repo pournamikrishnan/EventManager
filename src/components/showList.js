@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as stuffActions from '../actions/stuffActions';
-import '../styles/stuff.css';
+import * as showActions from '../actions/showActions';
+import '../styles/show.css';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {render} from 'react-dom';
@@ -23,7 +23,7 @@ const CalendarWithRange = withRange(Calendar);
  * dates for calender selection and file variable (.ics)
 */
 
-class stuffList extends React.Component {
+class showList extends React.Component {
     constructor(props) {
        super(props);
        this.state = {
@@ -86,7 +86,7 @@ class stuffList extends React.Component {
       this.setState({pageLevel: this.state.pageLevel+1});
       //as asyn state is updating,so we use 0 page no here..would have used 1 actually..
       if(this.state.pageLevel == 0){
-        this.props.stuffActions.fetchStuff(this.state);
+        this.props.showActions.fetchShow(this.state);
       }
     }
     /*
@@ -100,7 +100,7 @@ class stuffList extends React.Component {
      * state is passed. For now only Date is uesd to filter.
     */
     filterByDate(){
-      this.props.stuffActions.fetchStuff(this.state);
+      this.props.showActions.fetchShow(this.state);
     }
     /*
      * Events saved from carousel list to local state list.
@@ -235,14 +235,14 @@ class stuffList extends React.Component {
       });
     }
     render() {
-      if(!this.props.stuff){
+      if(!this.props.show){
           return (
               <div style={{marginTop: "18%", marginLeft: "50%"}}>
-                  Loading Stuff...
+                  Loading show tickets...
               </div>
           )
       }else{
-        let data = this.props.stuff._embedded ? this.props.stuff._embedded.events : [],
+        let data = this.props.show._embedded ? this.props.show._embedded.events : [],
             height = window.innerHeight - 100,
             fullHeight = window.innerHeight,
             fullWidth = window.innerWidth - 20,
@@ -385,24 +385,24 @@ class stuffList extends React.Component {
     }
 }
 
-stuffList.propTypes = {
-    stuffActions: PropTypes.object,
-    stuff: PropTypes.array
+showList.propTypes = {
+    showActions: PropTypes.object,
+    show: PropTypes.array
 };
 
 function mapStateToProps(state) {
     return {
-        stuff: state.stuff
+        show: state.show
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-       stuffActions: bindActionCreators(stuffActions, dispatch)
+       showActions: bindActionCreators(showActions, dispatch)
     };
 }
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(stuffList);
+)(showList);

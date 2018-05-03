@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
-import stuff from './stuffReducer';
+import show from './showReducer';
 
 /*
  * Redux state management :
  * Reducer combined.
  */
 const rootReducer = combineReducers({
-  stuff
+  show
 });
 
 export default rootReducer;
