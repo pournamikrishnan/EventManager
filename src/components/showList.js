@@ -384,18 +384,27 @@ class showList extends React.Component {
         }
     }
 }
-
+/*
+ * Default parameters
+ */
 showList.propTypes = {
     showActions: PropTypes.object,
     show: PropTypes.array
 };
-
+/*
+ * Subscribe of global store.
+ */
+/*
+ * State pullled to component
+ */
 function mapStateToProps(state) {
     return {
         show: state.show
     };
 }
-
+/*
+ * State pushed to component with dispatch passing...
+ */
 function mapDispatchToProps(dispatch) {
     return {
        showActions: bindActionCreators(showActions, dispatch)
